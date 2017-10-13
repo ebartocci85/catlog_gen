@@ -3,5 +3,6 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   movies = Movie.create([ name: 'Star Wars' ,  name: 'Lord of the Rings' ])
 #   Character.create(name: 'Luke', movie: movies.first)
+Product.create(upc:'753048643950', sku: 'TW2P84100', brand: 'Timex', size: 43, currency: 'USD', retail: '125', wholesale: '62.50', img_url: 'www.google.com')
