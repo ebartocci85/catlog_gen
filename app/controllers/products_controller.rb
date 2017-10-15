@@ -1,10 +1,16 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  require 'csv'
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @products.to_csv }
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /products/1
@@ -59,6 +65,13 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def csv_export
+  end
+
+  def csv_export_all
+    @products = Product.all
   end
 
   private

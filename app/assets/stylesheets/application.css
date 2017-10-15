@@ -73,3 +73,21 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+img {
+  align: middle;
+}

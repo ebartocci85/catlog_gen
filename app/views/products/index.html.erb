@@ -36,6 +36,71 @@
   </tbody>
 </table>
 
-<br>
+<!-- <div class="album text-muted">
+      <div class="container">
+
+        <div class="row">
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card">
+            <img data-src= <% image_tag("picture_holder") %> alt="SKU">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
+
 
 <%= link_to 'New Product', new_product_path %>
+
+<div class="album text-muted">
+  <div class="container">
+    
+    <div class="row">
+         <% @products.each do |product| %>
+        <!--  <div class="col-sm-4"> -->
+          <div class="card">
+            <%= image_tag("picture_holder")%>
+            <strong class="card-text">SKU: <%= product.sku %></strong>
+            <p class="card-text">Retail: <%= product.retail %></p>
+            <p class="card-text">Wholesale: <%= product.wholesale %></p>
+            <p class="card-text">UPC: <%= product.upc %></p>
+         </div>
+         <!-- </div>
+         --> <% end %>
+      </div>
+   </div>
+</div>
