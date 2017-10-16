@@ -91,3 +91,11 @@ table, th, td {
 img {
   align: middle;
 }
+
+a.btn {
+  color: white;
+}
+
+div.main {
+  margin-top: 80px
+}
