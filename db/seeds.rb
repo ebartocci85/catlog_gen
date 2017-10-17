@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([ name: 'Star Wars' ,  name: 'Lord of the Rings' ])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Product.create(upc:'753048643950', sku: 'TW2P84100', brand: 'Timex', size: 43, currency: 'USD', retail: '125', wholesale: '62.50', img_url: 'www.google.com')
 Product.create(upc:'753048655212', sku: 'TW2P95500', brand: 'TIMEX', size: '42MM', currency: 'USD', retail:'125', wholesale: '62.5', img_url:'TW2P95500.jpg')
 Product.create(upc:'753048576067', sku: 'TW2P64900', brand: 'TIMEX', size: '42MM', currency: 'USD', retail:'129', wholesale: '64.5', img_url:'TW2P64900.jpg')
 Product.create(upc:'753048655052', sku: 'TW4B07500', brand: 'TIMEX', size: '45MM', currency: 'USD', retail:'62', wholesale: '31', img_url:'TW4B07500.jpg')
