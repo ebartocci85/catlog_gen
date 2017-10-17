@@ -1,18 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
-
 <table>
   <thead>
     <tr>
-      <th>Upc</th>
-      <th>Sku</th>
+      <th>UPC</th>
+      <th>SKU</th>
       <th>Brand</th>
       <th>Size</th>
       <th>Currency</th>
       <th>Retail</th>
       <th>Wholesale</th>
-      <th>Img url</th>
+      <th>Img Url</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,71 +34,23 @@
   </tbody>
 </table>
 
-<!-- <div class="album text-muted">
-      <div class="container">
+<%= link_to 'New Product', new_product_path,class:"btn btn-primary" %>
 
-        <div class="row">
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src= <% image_tag("picture_holder") %> alt="SKU">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-
-      </div>
-    </div> -->
-
-
-<%= link_to 'New Product', new_product_path %>
+<hr>
 
 <div class="album text-muted">
   <div class="container">
     
     <div class="row">
          <% @products.each do |product| %>
-        <!--  <div class="col-sm-4"> -->
           <div class="card">
-            <%= image_tag("picture_holder")%>
+            <%= display_image_for_product(product) %>
             <strong class="card-text">SKU: <%= product.sku %></strong>
             <p class="card-text">Retail: <%= product.retail %></p>
             <p class="card-text">Wholesale: <%= product.wholesale %></p>
             <p class="card-text">UPC: <%= product.upc %></p>
          </div>
-         <!-- </div>
-         --> <% end %>
+        <% end %>
       </div>
    </div>
 </div>

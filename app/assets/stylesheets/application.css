@@ -86,8 +86,17 @@ table {
 
 table, th, td {
     border: 1px solid black;
+    margin-bottom: 20px
 }
 
 img {
   align: middle;
+}
+
+a.btn {
+  color: white;
+}
+
+div.main {
+  margin-top: 80px
 }
