@@ -89,9 +89,9 @@ table, th, td {
     margin-bottom: 20px
 }
 
-img {
-  align: middle;
-}
+/*img {
+  max-width: 100%
+}*/
 
 a.btn {
   color: white;
