@@ -63,6 +63,8 @@ body {
 
 .card-text {
   font-size: 85%;
+  color: black;
+  text-align: center;
 }
 
 footer {
