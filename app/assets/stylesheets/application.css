@@ -81,12 +81,17 @@ tbody {
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
+  display: block;
+  height: 300px;
+  width:  715px;
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 table, th, td {
     border: 1px solid black;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 /*img {
