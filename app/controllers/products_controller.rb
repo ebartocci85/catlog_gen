@@ -66,7 +66,11 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
+  def generate_catalog
+    send_catalog_pdf
+  end
+
   def csv_export
   end
 
@@ -83,5 +87,25 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:upc, :sku, :brand, :size, :currency, :retail, :wholesale, :img_url)
+    end
+
+    def catalog_upc_codes
+      [
+        "753048655212", "753048576067", "753048655052", "753048736140",
+        "753048643981", "753048643998", "753048688609", "753048620425",
+        "753048643967", "753048655168", "753048655175", "753048655199"
+      ]
+    end
+
+    def catalog_pdf
+      products = Product.where(upc: catalog_upc_codes).limit(12)
+      CatalogPdf.new(products)
+    end
+
+    def send_catalog_pdf
+      send_file catalog_pdf.to_pdf,
+        filename: catalog_pdf.filename,
+        type: "application/pdf",
+        disposition: "inline"
     end
 end

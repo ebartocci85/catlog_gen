@@ -5,6 +5,7 @@
     <tr>
       <th>UPC</th>
       <th>Brand</th>
+      <th>Image</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
       <tr>
         <td><%= product.upc %></td>
         <td><%= product.brand %></td>
+        <td><%= image_tag(asset_url(product.img_url), height: 300) %></td>
       </tr>
     <% end %>
   </tbody>
