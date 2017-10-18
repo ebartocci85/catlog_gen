@@ -36,6 +36,9 @@ gem 'hirb'
 gem 'pdfkit'
 gem 'render_anywhere'
 gem 'wkhtmltopdf-binary'
+gem 'roo'
+gem 'iconv'
+gem 'roo-xls'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

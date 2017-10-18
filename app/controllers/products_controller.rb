@@ -78,6 +78,15 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+def self.import(file)
+  # content
+end
+
+  def import
+      Product.import(params[:file])
+      redirect_to root_url, notice: "Products imported."
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
