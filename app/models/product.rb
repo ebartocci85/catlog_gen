@@ -16,7 +16,17 @@ class Product < ApplicationRecord
 	  (2..spreadsheet.last_row).each do |i|
 	    row = Hash[[header, spreadsheet.row(i)].transpose]
 	    product = find_by_id(row["id"]) || new
-	    product.attributes = row.to_hash.slice(*accessible_attributes)
+	  #  product.attributes = row.to_hash.slice("upc","sku","brand","size", "currency", "retail", 	 
+product.upc = row.to_hash["UPC"]
+product.sku = row.to_hash["SKU"]
+product.brand = row.to_hash["BRAND"]
+product.size = row.to_hash["SIZE"]
+product.currency = row.to_hash["CURRENCY"]
+product.retail = row.to_hash["RETAIL"]
+product.wholesale = row.to_hash["WHOLESALE"]
+product.img_url = row.to_hash["IMG_URL"]
+product.collection = row.to_hash["COLLECTION"]
+
 	    product.save!
 	  end
 	end
