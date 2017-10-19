@@ -9,3 +9,11 @@
 </ol>
 
 <p>Please upload CSV file that you would like to generate (PUT MARIO"S CSV UPLOAD HERE</p>
+
+<h2>Import Products</h2>
+
+<%= form_tag "/csv_gen", multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+  

@@ -1,0 +1,17 @@
+<div class="album text-muted">
+  <div class="container">
+
+    <div class="row">
+         <% @products.each do |product| %>
+          <div class="card">
+            <%= display_image_for_product(product) %>
+            <strong class="card-text">SKU: <%= product.sku %></strong>
+            <p class="card-text">Retail: <%= product.retail %></p>
+            <p class="card-text">Wholesale: <%= product.wholesale %></p>
+            <p class="card-text">UPC: <%= product.upc %></p>
+            <p class="card-text">Collection: <%= product.collection %></p>
+         </div>
+        <% end %>
+      </div>
+   </div>
+</div>
