@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   	collection { post :import }
   end
 
-  get 'export_all' => 'products#csv_export'
 
 end
 

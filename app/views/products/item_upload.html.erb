@@ -1,11 +1,10 @@
-<h2>Upload new items</h2>
+<h2>Import Products</h2>
 
-<h3>Instructions:</h3>
+<%= form_tag import_products_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+  
 
-<p>Ip lopsumor</p>
-
-<ol>
-	<li>testeststetsttest</li>
-</ol>
-
-<p>Please upload CSV file that you would like to generate (PUT MARIO"S CSV UPLOAD HERE</p>
+  <%=render "products_table" %>
+  
