@@ -83,9 +83,17 @@ def self.import(file)
 end
 
   def import
-      Product.import(params[:file])
+      Product.import(params[:file], "save")
       redirect_to root_url, notice: "Products imported."
   end
+
+
+  def csv_gen
+     @products = Product.import(params[:file], "view")
+     @products = @products.map{ |product| Product.find_by(upc: product.upc) }
+     @products.reject(&:blank?)
+  end
+
 
   def item_upload
      @products = Product.all
